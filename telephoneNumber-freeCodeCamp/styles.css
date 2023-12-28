@@ -1,0 +1,115 @@
+body {
+  background: linear-gradient(to right, #ff9966, #ff5e62);
+  background-size: 200% 100%;
+  animation: gradientAnimation 10s infinite alternate;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+#phone-frame {
+  background-color: #333;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
+}
+
+#screen {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 5px;
+  width: 250px;
+  height: 100px;
+}
+
+#title-input {
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+  line-height: 1.5;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#user-input {
+  width: calc(100% - 40px);
+  padding: 10px;
+  margin: 10px auto;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: block;
+  outline: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#user-input::placeholder {
+  color: transparent;
+}
+
+#button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#check-btn,
+#clear-btn {
+  width: calc(40% - 5px);
+  margin-right: 20px;
+  margin-left: 20px;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#check-btn:hover,
+#clear-btn:hover {
+  background-color: #45a049;
+}
+
+#results-div {
+  width: calc(100% - 40px);
+  padding: 10px;
+  margin: 20px 0;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+}
+
+@media (min-width: 600px) {
+  #phone-frame {
+    width: 400px;
+  }
+
+  #screen {
+    width: 350px;
+    height: 600px;
+  }
+}
